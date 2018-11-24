@@ -5,15 +5,25 @@ import hug
 
 # Types
 @hug.type(extend=hug.types.number)
-def not_zero(value):
-    """Accept any value of number type except 0"""
-    if value is 0:
+def positive_number(value):
+    """Accept any postive value of number type"""
+    if value < 0:
+        raise ValueError('Value cannot be less than 0')
+    else:
+        return value
+
+
+@hug.type(extend=hug.types.number)
+def non_zero_int(value):
+    """Accept any non-zero int value"""
+    if value == 0:
         raise ValueError('Value cannot be 0')
     else:
         return value
 
 # Operations
-# simple example
+
+# Simple type hints
 @hug.cli()
 def add(x: int, y: int) -> int:
     """Add two numbers"""
@@ -34,9 +44,9 @@ def multiply(x: hug.types.number, y: hug.types.number) -> hug.types.number:
     return x * y
 
 
-# Custom type
+# Hug's built-in types
 @hug.cli()
-def divide(x: hug.types.number, y: not_zero) -> hug.types.number:
+def divide(x: hug.types.number, y: non_zero_int) -> hug.types.number:
     """Divide two numbers"""
     return x / y
 
