@@ -1,5 +1,5 @@
 # hugCalc
-A simple calculator in [Hug](www.hug.rest)
+A simple calculator in [Hug](http://www.hug.rest)
 
 ## How to run the files
 
