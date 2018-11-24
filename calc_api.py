@@ -1,7 +1,7 @@
 """Simple functions to emulate basic operations of a calculator via HTTP"""
 import hug
 
- Types
+# Types
 @hug.type(extend=hug.types.number)
 def positive_number(value):
     """Accept any postive value of number type"""
