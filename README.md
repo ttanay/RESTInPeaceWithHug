@@ -1,6 +1,8 @@
 # REST in peace with Hug
 An introduction to [Hug](http://www.hug.rest)
 
+Slides: https://docs.google.com/presentation/d/1hNnsCm7GnX-ztEYPtAiOOLpEPW0I3EnF4E4vtDlXaTg/edit?usp=sharing
+
 ## How to run the files
 
 ```bash
